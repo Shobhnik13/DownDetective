@@ -1,7 +1,11 @@
 package routes
 
-import "github.com/gorilla/mux"
+import (
+	"down_detective/controllers"
+
+	"github.com/gorilla/mux"
+)
 
 func RegisterAppRoutes(router *mux.Router) {
-	// router.HandleFunc("/")
+	router.HandleFunc("/ping-urls", controllers.PingURLsHandler).Methods("POST")	
 }
